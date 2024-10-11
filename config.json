@@ -1,0 +1,18 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/programizdevil",
+        "prod_uri":"mysql://root:@localhost/programizdevil",
+        "fb_url":"facebook.com/programizdevil",
+        "x_url":"x.com/programizdevil",
+        "insta_url":"instagram.com/programizdevil",
+        "linkedin_url":"linkedin.com/programizdevil",
+        "blog_name":"programizdevil",
+        "about_text":"here you can add about text",
+        "number_of_posts":5,
+        "admin_user":"ansh",
+        "admin_password":"ansh@1234",
+        "upload_location":"D:\\Programming\\web development\\blog\\static\\images"
+    }
+}

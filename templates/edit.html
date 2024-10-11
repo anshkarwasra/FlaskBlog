@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="contactUs">
+        <div class="header">
+            <h1>EDIT YOUR POSTS</h1>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse
+                platea dictumst</p>
+        </div>
+        <div class="center">
+            <form action="/edit/{{sno}}" method="post">
+                <div>
+                    <input type="text" placeholder="title" name="title" value="{{post.title}}">
+                    <input type="text" placeholder="img_file" name="img" value="{{post.img_file}}">
+                </div>
+                <div>
+                    <input type="text" placeholder="slug" name="slug" value="{{post.slug}}">
+                </div>
+                <textarea id="" placeholder="Content" cols="8" rows="10" name="content" ></textarea>
+                <button type="submit">Edit Post</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

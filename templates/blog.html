@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+{% set fname= "images/"+ post.img_file  %}
+
+<article>
+    <div class="left">
+        <img src="{{url_for('static',filename= fname)}}" alt="" srcset="">
+        <div class="heading">
+            <h1>{{post.title}}</h1>
+        </div>
+    </div>
+    <div class="right">
+        <div class="content">
+            <p>
+                {{post.content}}
+            </p>
+            <img src="{{url_for('static',filename=fname)}}" alt="" srcset="" width="1000">
+            <p>
+                {{post.content}}
+            </p>
+        </div>
+    </div>
+    <div class="social">
+        <p>like our effort! give us a upvote</p>
+        <a href="/upvote/{{post.slug}}"><img src="{{url_for('static',filename='images/arrow.svg')}}" alt="" class="filter-white" style="height: 60px;width: 60px;"></a>
+    </div>
+    <div class="comments-section">
+        <h2>Comments</h2>
+        <div class="comment-form">
+            <form action="/comment/{{post.slug}}" method="post">
+                <textarea style="background-color: rgb(20,20,20); border: 2px solid rgb(10,10,10);" placeholder="Add a comment..." id="comment-input" name="content"></textarea>
+            <button type="submit">Post Comment</button>
+            </form>
+        </div>
+        <div class="comment-list">
+            {% for eli in comment %}
+            <div class="comment"></div>
+                <p class="comment-author">{{eli.user}}</p>
+                <p class="comment-content">{{eli.content}}<p>
+            </div>
+            {% endfor %}
+            <!-- Additional comments will be inserted here -->
+        </div>
+    </div>
+    
+</article>
+
+{% endblock %}

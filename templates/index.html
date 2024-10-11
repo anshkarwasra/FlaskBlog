@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        .swiper {
+            height: 50vh;
+            width: 80vw;
+            margin-bottom: 120px;
+            padding: 20px 50px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <div class="homePage">
+        <div class="navBar">
+            <nav>
+                <div class="title">
+                    <h1>{{ params["blog_name"] }}</h1>
+                </div>
+                <ul>
+                    <li><a href="/" class="clrGrey">Home</a></li>
+                    <li><a href="/about" class="clrGrey">About us</a></li>
+                    <li><a href="/contact" class="clrGrey">Contact</a></li>
+                    <li><a href="/dashboard" class="clrGrey">Login</a></li>
+                    <li><a href="/post/first-post" class="clrGrey">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center">
+            <section>
+                <h2>designed with Love</h2>
+                <h1>{{params["blog_name"]}}</h1>
+            </section>
+            <div class="buttons">
+                <button>EXPLORE BLOGS</button>
+                <button>KNOW MORE</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="about_2">
+        <div class="header">
+            <h1>THIS MONTH'S TOP PICKS</h1>
+            <p class="clrGrey">These are the most upvoted blog posts of this month</p>
+        </div>
+        <div class="cards" id="cards">>
+                <div target="0"  class="card  PageCard bGgrey">
+                    <div class="icon bGgrey"><img src="{{url_for('static',filename='images/first-list-icon.png')}}" alt="" srcset=""></div>
+                    <h1>UNIQUE IDEAS</h1>
+                </div>
+                <div target="1"  class="card bGgrey PageCard">
+                    <div class="icon bGgrey"><img src="{{url_for('static',filename='images/second-list-icon.png')}}" alt="" srcset=""></div>
+                    <h1>THEME EDIT</h1>
+                </div>
+                <div target="2"  class="card bGgrey PageCard">
+                    <div class="icon bGgrey"><img src="{{url_for('static',filename='images/third-list-icon.png')}}" alt="" srcset=""></div>
+                    <h1>TRANSLATION</h1>
+                </div>
+                <div target="3"  class="card bGgrey PageCard">
+                    <div class="icon bGgrey"><img src="{{url_for('static',filename='images/fourth-list-icon.png')}}" alt="" srcset=""></div>
+                    <h1>TRANSLATION</h1>
+                </div>
+                <div target="4"  class="card bGgrey PageCard">
+                    <div class="icon bGgrey"><img src="{{url_for('static',filename='images/fivth-list-icon.png')}}" alt="" srcset=""></div>
+                    <h1>HD PHOTOS</h1>
+                </div>
+        </div>
+        <section class="blogs">
+            <div class="blog">
+                <div class="leftBox">
+                    <h2>UNIQUE IDEAS</h2>
+                    <p>Power is free Bootstrap CSS template from Templatemo website. Feel free to modify and use this
+                        layout. Please tell your friends about our website. Mixtape hella beard meditation, organic
+                        polaroid waistcoat humblebrag taxider my tumblr. Hexagon kinfolk chartreuse shoreditch. </p>
+                    <p>Pour-over hammock intelligentsia hashtag air plant distillery. Sustainable selvage hashtag, +1
+                        messenger bag pop-up banh mi jianbing art party roof party try-hard retro small batch. Kogi
+                        fanny pack raclette mustache, pok pok jean shorts +1 tote bag keffiyeh. Post-ironic af master
+                        polaroid.</p>
+                    <button>DOWNLOAD NOW</button>
+                </div>
+                <img src="{{url_for('static',filename='images/right-side-image_1.jpg')}}" alt="" srcset="">
+            </div>
+            <div class="blog">
+                <div class="leftBox">
+                    <h2>UNIQUE IDEAS</h2>
+                    <p>Power is free Bootstrap CSS template from Templatemo website. Feel free to modify and use this
+                        layout. Please tell your friends about our website. Mixtape hella beard meditation, organic
+                        polaroid waistcoat humblebrag taxider my tumblr. Hexagon kinfolk chartreuse shoreditch. </p>
+                    <p>Pour-over hammock intelligentsia hashtag air plant distillery. Sustainable selvage hashtag, +1
+                        messenger bag pop-up banh mi jianbing art party roof party try-hard retro small batch. Kogi
+                        fanny pack raclette mustache, pok pok jean shorts +1 tote bag keffiyeh. Post-ironic af master
+                        polaroid.</p>
+                    <button>DOWNLOAD NOW</button>
+                </div>
+                <img src="{{url_for('static',filename='images/right-side-image_2.jpg')}}" alt="" srcset="">
+            </div>
+            <div class="blog">
+                <div class="leftBox">
+                    <h2>UNIQUE IDEAS</h2>
+                    <p>Power is free Bootstrap CSS template from Templatemo website. Feel free to modify and use this
+                        layout. Please tell your friends about our website. Mixtape hella beard meditation, organic
+                        polaroid waistcoat humblebrag taxider my tumblr. Hexagon kinfolk chartreuse shoreditch. </p>
+                    <p>Pour-over hammock intelligentsia hashtag air plant distillery. Sustainable selvage hashtag, +1
+                        messenger bag pop-up banh mi jianbing art party roof party try-hard retro small batch. Kogi
+                        fanny pack raclette mustache, pok pok jean shorts +1 tote bag keffiyeh. Post-ironic af master
+                        polaroid.</p>
+                    <button>DOWNLOAD NOW</button>
+                </div>
+                <img src="{{url_for('static',filename='images/right-side-image_3.jpg')}}" alt="" srcset="">
+            </div>
+            <div class="blog">
+                <div class="leftBox">
+                    <h2>UNIQUE IDEAS</h2>
+                    <p>Power is free Bootstrap CSS template from Templatemo website. Feel free to modify and use this
+                        layout. Please tell your friends about our website. Mixtape hella beard meditation, organic
+                        polaroid waistcoat humblebrag taxider my tumblr. Hexagon kinfolk chartreuse shoreditch. </p>
+                    <p>Pour-over hammock intelligentsia hashtag air plant distillery. Sustainable selvage hashtag, +1
+                        messenger bag pop-up banh mi jianbing art party roof party try-hard retro small batch. Kogi
+                        fanny pack raclette mustache, pok pok jean shorts +1 tote bag keffiyeh. Post-ironic af master
+                        polaroid.</p>
+                    <button>DOWNLOAD NOW</button>
+                </div>
+                <img src="{{url_for('static',filename='images/right-side-image_4.jpg')}}" alt="" srcset="">
+            </div>
+            <div class="blog">
+                <div class="leftBox">
+                    <h2>UNIQUE IDEAS</h2>
+                    <p>Power is free Bootstrap CSS template from Templatemo website. Feel free to modify and use this
+                        layout. Please tell your friends about our website. Mixtape hella beard meditation, organic
+                        polaroid waistcoat humblebrag taxider my tumblr. Hexagon kinfolk chartreuse shoreditch. </p>
+                    <p>Pour-over hammock intelligentsia hashtag air plant distillery. Sustainable selvage hashtag, +1
+                        messenger bag pop-up banh mi jianbing art party roof party try-hard retro small batch. Kogi
+                        fanny pack raclette mustache, pok pok jean shorts +1 tote bag keffiyeh. Post-ironic af master
+                        polaroid.</p>
+                    <button>DOWNLOAD NOW</button>
+                </div>
+                <img src="{{url_for('static',filename='images/right-side-image_5.jpg')}}" alt="" srcset="">
+            </div>
+        </section>
+    </div>
+    <div class="gallery">
+        <div class="header">
+            <h1>OUR GALLERY</h1>
+            <p>Aliquam neque neque, commodo in euismod id, lobortis in lacus. Duis interdum sagittis velit, fermentum
+                tincidunt lectus. Nam ornare turpis.</p>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="blogsEntries">
+        <div class="header">
+            <h1>OUR BLOG ENTRIES</h1>
+            <p class="clrGrey">Aliquam neque neque, commodo in euismod id, lobortis in lacus. Duis interdum sagittis
+                velit, fermentum tincidunt lectus. Nam ornare turpis</p>
+        </div>
+        <section class="blogContent" style="display: flex;">
+            <div class="left">
+                {% for post in posts %}
+                {% set index = (post.sno)-1  %}
+                <div target={{index}} class="leftBlogEntry blogEntry" style="cursor: pointer;">
+                    <h1>{{post.title}}</h1>
+                    <div class="content">
+                        <li class="blogImgList"><img class="filter-green" src="{{url_for('static',filename='images/admin.svg')}}" alt="" srcset="">IGN</li>
+                        <li class="blogImgList"><img class="filter-green" src="{{url_for('static',filename='images/calender.svg')}}" alt="" srcset="">{{post.date}}</li>
+                        <li class="blogImgList"><img class="filter-green" src="{{url_for('static',filename='images/arrow.svg')}}" alt="" srcset="">{{post.upvote}} upvotes</li>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+            {% for post in posts %}
+            {% set fname= "images/"+ post.img_file  %}
+            <div class="right blogDesicription" style="margin-top: 60px;">
+                <img src="{{url_for('static',filename=fname)}}" alt="" srcset="" height="331px" width="555px">
+                <div class="innerContent">
+                    <div class="blogEntry">
+                        <h1>{{post.title}}</h1>
+                        <div class="content">
+                            <li><img class="filter-green" src="{{url_for('static',filename='images/admin.svg')}}" alt="" srcset="">IGN</li>
+                            <li><img class="filter-green" src="{{url_for('static',filename='images/calender.svg')}}" alt="" srcset="">{{post.date}}
+                            </li>
+                            <li><img class="filter-green" src="{{url_for('static',filename='images/arrow.svg')}}" alt="" srcset="">{{post.upvote}} upvotes</li>
+                        </div>
+                    </div>
+                    <div class="para" style="overflow: hidden;">
+                        <p style="overflow: hidden;">{{post.content}}</p>
+                    </div>
+                    <button><a href="/post/{{post.slug}}" style="text-decoration: none;color: white;">CONTINUE READING</a></button>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+
+    
+    <div class="footer" style="margin-top: 120vh;">
+        <div class="socials">
+            <li><img src="{{url_for('static',filename='images/facebook.svg')}}" class="filter-green"><a href="{{params['fb_url']}}" style="text-decoration: none;color: white;">Facebook</a></li>
+            <li><img src="{{url_for('static',filename='images/instagram.svg')}}" class="filter-pink"><a href="{{params['insta_url']}}" style="text-decoration: none;color: white;">Instagram</a></li>
+            <li><img src="{{url_for('static',filename='images/x.svg')}}"><a href="{{params['x_url']}}" style="text-decoration: none;color: white;">X</a></li>
+            <li><img src="{{url_for('static',filename='images/linkedin.svg')}}" height="30" width="30"><a href="{{params['linkedin_url']}}" style="text-decoration: none;color: white;">LinkedIn</a></li>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html> 
+
+
+    

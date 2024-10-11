@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="about">
+        <div class="header">
+            <h1>Web Design & Development Crew!</h1>
+            <p>{{ params["about_text"] }}</p>
+            <button>Discover More</button>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="{{url_for('static',filename='images/first-service-icon.png')}}" alt="" srcset="">
+                <h1>Mobile Ready</h1>
+                <p>Aenean ac ultricies nisl. Nullam vitae aliquam velit. Vestibulum a ex eget arcu accumsan luctus at
+                    vitae urna. Vestibulum ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="card">
+                <img src="{{url_for('static',filename='images/second-service-icon.png')}}" alt="" srcset="">
+                <h1>HTML CSS</h1>
+                <p>Aenean ac ultricies nisl. Nullam vitae aliquam velit. Vestibulum a ex eget arcu accumsan luctus at
+                    vitae urna. Vestibulum ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="card">
+                <img src="{{url_for('static',filename='images/third-service-icon.png')}}" alt="" srcset="">
+                <h1>Responsive Design</h1>
+                <p>Aenean ac ultricies nisl. Nullam vitae aliquam velit. Vestibulum a ex eget arcu accumsan luctus at
+                    vitae urna. Vestibulum ante ipsum primis in faucibus.</p>
+            </div>
+        </div>
+    </div> 
+    {% endblock %}

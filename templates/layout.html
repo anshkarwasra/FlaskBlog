@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+</head>
+<body>
+    <div class="navBar" style="margin-left: 10vw;margin-right: 10vw;">
+        <nav>
+            <div class="title">
+                <h1>Power</h1>
+            </div>
+            <ul>
+                <li><a href="/" class="clrGrey">Home</a></li>
+                <li><a href="/about" class="clrGrey">About us</a></li>
+                <li><a href="/contact" class="clrGrey">Contact</a></li>
+                <li><a href="/login" class="clrGrey">Login</a></li>
+                <li><a href="/blogs" class="clrGrey">Blogs</a></li>
+            </ul>
+        </nav>
+    </div>
+
+{% block body %}
+
+{% endblock %}
+
+    <div class="footer">
+        <div class="socials">
+            <li><img src="{{url_for('static',filename='images/facebook.svg')}}" class="filter-green"><a href="{{params['fb_url']}}" style="text-decoration: none;color: white;">Facebook</a></li>
+            <li><img src="{{url_for('static',filename='images/instagram.svg')}}" class="filter-pink"><a href="{{params['insta_url']}}" style="text-decoration: none;color: white;">Instagram</a></li>
+            <li><img src="{{url_for('static',filename='images/x.svg')}}"><a href="{{params['x_url']}}" style="text-decoration: none;color: white;">X</a></li>
+            <li><img src="{{url_for('static',filename='images/linkedin.svg')}}" height="30" width="30"><a href="{{params['linkedin_url']}}" style="text-decoration: none;color: white;">LinkedIn</a></li>
+        </div>
+
+    </div>
+
+</body>
+
+</html>    
